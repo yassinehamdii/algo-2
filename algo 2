@@ -1,0 +1,31 @@
+algoritheme tris 
+variable 
+i,n  entier ;
+
+Début
+    ecrire ("Entrez le nombre d'éléments dans le tableau : ")
+    lire(n)
+
+    ecrire ("Entrez les éléments du tableau : ")
+    Pour i de 0 à n-1 faire
+        lire(arr[i])
+    Fin Pour
+
+    // Tri par insertion
+    Pour i de 1 à n-1 faire
+        key = arr[i]      // Élément à insérer
+        j = i - 1         // Index de l'élément précédent
+
+            Tant que j >= 0 et arr[j] > key faire
+            arr[j + 1] = arr[j] // Déplacer l'élément vers la droite
+            j = j - 1
+        Fin Tant Que
+
+        arr[j + 1] = key 
+    Fin Pour
+
+    ecrire ("Tableau trié : ")
+    Pour i de 0 à n-1 faire
+        ecrire (arr[i])
+    Fin Pour
+Fin
